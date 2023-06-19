@@ -43,9 +43,7 @@ else
     fi
 fi
 
-echo "copying configs to seq server"
-
 # This workspace gets created in each new seq instance, but there are a lot of issues getting 
 # configs from it so it's easier to just ignore it and use a default empty workspace.
-seqcli workspace remove -o user-admin -t Personal > /dev/null 2>&1
+seqcli workspace remove -o user-admin -t Personal > /dev/null 2>&1 || :
 
